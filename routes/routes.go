@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-const baseURL = "http://10.49.122.144:3459"
+const baseURL = "http://10.49.122.144:1208"
 
 const userSecret = "9759b22e3ea6d95d2e0606132358387e5834a8682dd28ee7ebea027da9d76440"
 
@@ -100,6 +100,8 @@ func postRequest(c *fiber.Ctx, url string) error {
     if err != nil {
         return c.Status(500).SendString("Internal Server Error")
     }
+
+    fmt.Println("Response:", string(body))
 
     return c.Status(resp.StatusCode).Send(body)
 }
