@@ -21,3 +21,5 @@ PATH    METHOD     BODY
 /iNeedAHint     POST    ?
 /enterChallenge POST    ?
 /submitSolution POST    ?
+
+test
